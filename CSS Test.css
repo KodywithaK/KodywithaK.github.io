@@ -1,0 +1,61 @@
+html {
+    /* scroll-snap-type: y mandatory; */
+    scroll-snap-type: y proximity;
+  }
+  body {
+      margin: 0 auto;
+  }
+  h1 {
+      border-bottom: .1vh solid black;
+  }
+  p {
+      padding: 1vh;
+  }
+  section.rainbow {
+      block-size: 100vh;
+      scroll-snap-align: start;
+      /* scroll-snap-align: center; */
+      /* scroll-snap-align: end; */
+      /* scroll-snap-stop: always; */
+      /* scroll-snap-stop: normal; */
+      
+      background: 
+          linear-gradient(
+              0deg,
+              hsl(0 100% 50% / 80%),
+              hsl(0 100% 50% / 0%)
+              54%
+          ),
+          linear-gradient(
+              60deg,
+              hsl(60 100% 50% / 80%),
+              hsl(60 100% 50% / 0%)
+              54%
+          ),
+          linear-gradient(
+              120deg,
+              hsl(120 100% 50% / 80%),
+              hsl(120 100% 50% / 0%)
+              54%
+          ),
+          linear-gradient(
+              180deg,
+              hsl(180 100% 50% / 80%),
+              hsl(180 100% 50% / 0%)
+              54%
+          ),
+          linear-gradient(
+              240deg,
+              hsl(240 100% 50% / 80%),
+              hsl(240 100% 50% / 0%)
+              54%
+          ),
+          linear-gradient(
+              300deg,
+              hsl(300 100% 50% / 80%),
+              hsl(300 100% 50% / 0%)
+              54%
+          );
+          display: grid;
+          place-items: center;
+  }
