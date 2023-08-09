@@ -46,6 +46,7 @@ body {
 	margin: 0 auto;
 	display: grid;
 	place-items: center;
+	overflow-y: hidden;
 }
 div {
 	block-size: 100vh;
