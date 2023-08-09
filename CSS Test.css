@@ -1,74 +1,66 @@
 :root {
 	--shared-background:
-		linear-gradient(
-			0deg,
+		linear-gradient(0deg,
 			hsl(0 100% 50% / 80%),
-			hsl(0 100% 50% / 0%)
-			54%
-		),
-		linear-gradient(
-			60deg,
+			hsl(0 100% 50% / 0%) 54%),
+		linear-gradient(60deg,
 			hsl(60 100% 50% / 80%),
-			hsl(60 100% 50% / 0%)
-			54%
-		),
-		linear-gradient(
-			120deg,
+			hsl(60 100% 50% / 0%) 54%),
+		linear-gradient(120deg,
 			hsl(120 100% 50% / 80%),
-			hsl(120 100% 50% / 0%)
-			54%
-		),
-		linear-gradient(
-			180deg,
+			hsl(120 100% 50% / 0%) 54%),
+		linear-gradient(180deg,
 			hsl(180 100% 50% / 80%),
-			hsl(180 100% 50% / 0%)
-			54%
-		),
-		linear-gradient(
-			240deg,
+			hsl(180 100% 50% / 0%) 54%),
+		linear-gradient(240deg,
 			hsl(240 100% 50% / 80%),
-			hsl(240 100% 50% / 0%)
-			54%
-		),
-		linear-gradient(
-			300deg,
+			hsl(240 100% 50% / 0%) 54%),
+		linear-gradient(300deg,
 			hsl(300 100% 50% / 80%),
-			hsl(300 100% 50% / 0%)
-			54%
-		);
+			hsl(300 100% 50% / 0%) 54%);
 }
+
 html {
 	background: var(--shared-background);
-	background-attachment:fixed;
+	background-attachment: fixed;
 	scroll-snap-type: y mandatory;
 }
+
 body {
 	margin: 0 auto;
 	display: grid;
 	place-items: center;
-	overflow-y: hidden;
 }
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
 div {
 	block-size: 100vh;
 	scroll-snap-align: center;
 	scroll-snap-stop: always;
 }
+
 div#box {
 	/* display: grid; */
-	background: rgba(0,0,0,.75);
+	background: rgba(0, 0, 0, .75);
 	border-radius: 5vmax;
-	filter:drop-shadow(0vh 0vh 0.25vh black);
+	filter: drop-shadow(0vh 0vh 0.25vh black);
 	padding: 5vh;
 	width: fit-content;
 	height: fit-content;
 }
+
 p {
 	/*Following 5 settings required for transparent font*/
 	background: var(--shared-background);
-	background-attachment: fixed;/*Makes font color match background position*/
+	background-attachment: fixed;
+	/*Makes font color match background position*/
 	-webkit-background-clip: text;
 	color: transparent;
-	filter: drop-shadow(0vh 0vh 0vh white);/*Makes text easier to read*/
+	filter: drop-shadow(0vh 0vh 0vh white);
+	/*Makes text easier to read*/
 
 	font-size: 1.25rem;
 	font-weight: 1000;
